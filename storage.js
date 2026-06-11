@@ -35,16 +35,14 @@ function finish(cb){
     console.log("finish");
     cb();
 }
-
-
-    getItem(()=>{
+getItem(()=>{
         calc(()=>{
-            pay(()=>{
+       pay(()=>{
                 finish(()=>{
-                    console.log("Done");
+                console.log("Done");
                 },200)
             },300)
-        },500)
+     },500)
     },1000)
 
 

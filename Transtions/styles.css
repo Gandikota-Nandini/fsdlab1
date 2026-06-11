@@ -1,0 +1,73 @@
+.transition-container{
+    width: 300px;
+    height: 350px;
+    background-color: red;
+    transition: all 5s ease-in-out;
+    margin :100px;
+
+}
+.transition-container:hover{
+    background-color: blue;
+    transform: scaleX(360deg);
+
+}
+.loader{
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 5s linear infinite;
+    position:relative;
+    left:0%;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); 
+        top:0%;
+    left:0%;
+    }
+    25%{
+        transform:rotate(90deg);
+        left:calc(100% - 120px);
+        top:0%
+    }
+    50%{
+        transform: rotate(180deg); 
+        top:calc(100% - 120px);
+        left:calc(100% - 120px);
+    }
+    100% { transform: rotate(360deg); 
+    top:calc(100% - 120px);
+    top:0%;
+
+    }
+   
+}
+.hr{
+    width: 100%;
+    height: 5px;
+}
+.BlastEffect{
+    height: 100px;
+    width: 300px;
+    margin:100px;
+    background-color: orange;
+animation: blast 5s ease-out;
+ transform: skew(360deg);
+
+transform-origin: center;
+}
+@keyframes blast{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
